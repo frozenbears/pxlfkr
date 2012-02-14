@@ -8,9 +8,7 @@
 
 #include "OscListener.h"
 
-#include "AviatorBridge.h"
-
-#include "TestClass.h"
+#include "LuaBridge.h"
 
 #define PORT 12345
 
@@ -20,7 +18,7 @@ using namespace std;
 
 #pragma mark App
 
-class Aviator : public AppBasic {
+class PixelFucker : public AppBasic {
 
 public:
 
@@ -32,12 +30,12 @@ public:
 	void draw();
 	
 	osc::Listener listener;
-	AviatorBridge av;
+    LuaBridge luaBridge;
 };
 
 #pragma mark Events
 
-void Aviator::keyDown( KeyEvent event )
+void PixelFucker::keyDown( KeyEvent event )
 {
 	//Todo: change to ESC
 	if( event.getCode() == KeyEvent::KEY_ESCAPE ) {
@@ -45,42 +43,42 @@ void Aviator::keyDown( KeyEvent event )
 	}
 }
 
-void Aviator::fileDrop( FileDropEvent event )
+void PixelFucker::fileDrop( FileDropEvent event )
 {
 	//we may as well support this event at some point
 }
 
 #pragma mark Run Loop
 
-void Aviator::setup()
+void PixelFucker::setup()
 {
 	// Todo: enable resize from lua
 	setWindowSize(1024, 768);
 	
 	listener.setup(PORT);
-	av.setup();
+	luaBridge.setup();
 }
 
-void Aviator::update()
+void PixelFucker::update()
 {
 	while (listener.hasWaitingMessages()) {
 		osc::Message message;
 		listener.getNextMessage(&message);
-		av.handleMessage(message);
+		luaBridge.handleMessage(message);
 	}
 		
-	av.update();
+	luaBridge.update();
 	
 }
 
-void Aviator::draw()
+void PixelFucker::draw()
 {
 	//clear the screen, enable alpha
 	gl::clear( Color( 0, 0, 0 ) );
 	gl::enableAlphaBlending();
 	
-	av.draw();
+	luaBridge.draw();
 }
 
 //DO IT
-CINDER_APP_BASIC( Aviator, RendererGl );
+CINDER_APP_BASIC( PixelFucker, RendererGl );

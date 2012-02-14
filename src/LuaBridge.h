@@ -4,7 +4,7 @@
 #include "cinder/Cinder.h"
 
 
-class AviatorBridge {
+class LuaBridge {
 	
 public:
 	

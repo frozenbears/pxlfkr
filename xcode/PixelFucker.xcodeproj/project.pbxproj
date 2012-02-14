@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00C235CC10FE32E300223CDC /* Aviator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C235CB10FE32E300223CDC /* Aviator.cpp */; };
+		00C235CC10FE32E300223CDC /* PixelFucker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C235CB10FE32E300223CDC /* PixelFucker.cpp */; };
 		00C938DC0ECCB5AE000238B1 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C938D90ECCB5AE000238B1 /* CoreVideo.framework */; };
 		00C938DD0ECCB5AE000238B1 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C938DA0ECCB5AE000238B1 /* QTKit.framework */; };
 		00C938DE0ECCB5AE000238B1 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C938DB0ECCB5AE000238B1 /* OpenGL.framework */; };
 		00C93A0C0ECCEED2000238B1 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C93A0B0ECCEED2000238B1 /* QuickTime.framework */; };
 		00CDB2C911781D8700F1AEE2 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00CDB2C811781D8700F1AEE2 /* AudioUnit.framework */; };
 		00CDB2DB11781E1E00F1AEE2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00CDB2DA11781E1E00F1AEE2 /* AudioToolbox.framework */; };
-		0C0FFC4A13F1055E003D5B4D /* AviatorBridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0FFC4613F1055E003D5B4D /* AviatorBridge.cpp */; };
+		0C0FFC4A13F1055E003D5B4D /* LuaBridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0FFC4613F1055E003D5B4D /* LuaBridge.cpp */; };
 		0C0FFC4B13F1055E003D5B4D /* LuaState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0FFC4813F1055E003D5B4D /* LuaState.cpp */; };
 		0C0FFD2D13F24B31003D5B4D /* osc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0FFCFD13F24B31003D5B4D /* osc.a */; };
 		0C0FFD4013F24B31003D5B4D /* OscBundle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0FFD2813F24B31003D5B4D /* OscBundle.cpp */; };
@@ -25,21 +25,21 @@
 		0CE11C3B146902B300B63246 /* Drawing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CE11C39146902B300B63246 /* Drawing.cpp */; };
 		0CE11C3E146902C200B63246 /* core.lua in Sources */ = {isa = PBXBuildFile; fileRef = 0CE11C3D146902C200B63246 /* core.lua */; };
 		0CE11CC3146908B400B63246 /* Drawing.tolua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CE11CC2146908B400B63246 /* Drawing.tolua.cpp */; };
-		0CE11CCE1469145A00B63246 /* AviatorBinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CE11CCD1469145A00B63246 /* AviatorBinding.cpp */; };
+		0CE11CCE1469145A00B63246 /* CoreBinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CE11CCD1469145A00B63246 /* CoreBinding.cpp */; };
 		0CE11D4114691A3400B63246 /* core.lua in Resources */ = {isa = PBXBuildFile; fileRef = 0CE11C3D146902C200B63246 /* core.lua */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00C235CB10FE32E300223CDC /* Aviator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Aviator.cpp; path = ../src/Aviator.cpp; sourceTree = SOURCE_ROOT; };
+		00C235CB10FE32E300223CDC /* PixelFucker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PixelFucker.cpp; path = ../src/PixelFucker.cpp; sourceTree = SOURCE_ROOT; };
 		00C938D90ECCB5AE000238B1 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = SDKs/MacOSX10.5.sdk/System/Library/Frameworks/CoreVideo.framework; sourceTree = DEVELOPER_DIR; };
 		00C938DA0ECCB5AE000238B1 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = SDKs/MacOSX10.5.sdk/System/Library/Frameworks/QTKit.framework; sourceTree = DEVELOPER_DIR; };
 		00C938DB0ECCB5AE000238B1 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		00C93A0B0ECCEED2000238B1 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
 		00CDB2C811781D8700F1AEE2 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		00CDB2DA11781E1E00F1AEE2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		0C0FFC4613F1055E003D5B4D /* AviatorBridge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AviatorBridge.cpp; path = ../src/AviatorBridge.cpp; sourceTree = SOURCE_ROOT; };
-		0C0FFC4713F1055E003D5B4D /* AviatorBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AviatorBridge.h; path = ../src/AviatorBridge.h; sourceTree = SOURCE_ROOT; };
+		0C0FFC4613F1055E003D5B4D /* LuaBridge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LuaBridge.cpp; path = ../src/LuaBridge.cpp; sourceTree = SOURCE_ROOT; };
+		0C0FFC4713F1055E003D5B4D /* LuaBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LuaBridge.h; path = ../src/LuaBridge.h; sourceTree = SOURCE_ROOT; };
 		0C0FFC4813F1055E003D5B4D /* LuaState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LuaState.cpp; path = ../src/LuaState.cpp; sourceTree = SOURCE_ROOT; };
 		0C0FFC4913F1055E003D5B4D /* LuaState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LuaState.h; path = ../src/LuaState.h; sourceTree = SOURCE_ROOT; };
 		0C0FFCE613F24B31003D5B4D /* IpEndpointName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IpEndpointName.h; sourceTree = "<group>"; };
@@ -74,15 +74,15 @@
 		0CE11CC2146908B400B63246 /* Drawing.tolua.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Drawing.tolua.cpp; sourceTree = "<group>"; };
 		0CE11CC414690BDE00B63246 /* Drawing.tolua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drawing.tolua.h; sourceTree = "<group>"; };
 		0CE11CC714690EF000B63246 /* LuaBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LuaBinding.h; path = ../src/LuaBinding.h; sourceTree = SOURCE_ROOT; };
-		0CE11CCC1469145A00B63246 /* AviatorBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AviatorBinding.h; path = ../src/AviatorBinding.h; sourceTree = SOURCE_ROOT; };
-		0CE11CCD1469145A00B63246 /* AviatorBinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AviatorBinding.cpp; path = ../src/AviatorBinding.cpp; sourceTree = SOURCE_ROOT; };
+		0CE11CCC1469145A00B63246 /* CoreBindings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreBindings.h; path = ../src/CoreBindings.h; sourceTree = SOURCE_ROOT; };
+		0CE11CCD1469145A00B63246 /* CoreBinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CoreBinding.cpp; path = ../src/CoreBinding.cpp; sourceTree = SOURCE_ROOT; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		32CA4F630368D1EE00C91783 /* Aviator_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aviator_Prefix.pch; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* PixelFucker_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PixelFucker_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* Aviator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aviator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1107320486CEB800E47090 /* PixelFucker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixelFucker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 		00BC6BCE0F93F7470086A1DC /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				32CA4F630368D1EE00C91783 /* Aviator_Prefix.pch */,
+				32CA4F630368D1EE00C91783 /* PixelFucker_Prefix.pch */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -247,7 +247,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107320486CEB800E47090 /* Aviator.app */,
+				8D1107320486CEB800E47090 /* PixelFucker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -270,17 +270,17 @@
 			children = (
 				0CE11C3C146902C200B63246 /* scripts */,
 				0CE11C38146902B300B63246 /* bindings */,
-				00C235CB10FE32E300223CDC /* Aviator.cpp */,
-				0C0FFC4713F1055E003D5B4D /* AviatorBridge.h */,
-				0C0FFC4613F1055E003D5B4D /* AviatorBridge.cpp */,
+				00C235CB10FE32E300223CDC /* PixelFucker.cpp */,
+				0C0FFC4713F1055E003D5B4D /* LuaBridge.h */,
+				0C0FFC4613F1055E003D5B4D /* LuaBridge.cpp */,
 				0C0FFDA213F4CE96003D5B4D /* OSCMessageTable.h */,
 				0C0FFDA313F4CE96003D5B4D /* OSCMessageTable.cpp */,
 				0C0FFC4913F1055E003D5B4D /* LuaState.h */,
 				0C0FFC4813F1055E003D5B4D /* LuaState.cpp */,
 				0C0FFDA513F4D4F8003D5B4D /* LuaValue.h */,
 				0CE11CC714690EF000B63246 /* LuaBinding.h */,
-				0CE11CCC1469145A00B63246 /* AviatorBinding.h */,
-				0CE11CCD1469145A00B63246 /* AviatorBinding.cpp */,
+				0CE11CCC1469145A00B63246 /* CoreBindings.h */,
+				0CE11CCD1469145A00B63246 /* CoreBinding.cpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -305,9 +305,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D1107260486CEB800E47090 /* Aviator */ = {
+		8D1107260486CEB800E47090 /* PixelFucker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Aviator" */;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "PixelFucker" */;
 			buildPhases = (
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
@@ -317,10 +317,10 @@
 			);
 			dependencies = (
 			);
-			name = Aviator;
+			name = PixelFucker;
 			productInstallPath = "$(HOME)/Applications";
 			productName = quickTimeSample;
-			productReference = 8D1107320486CEB800E47090 /* Aviator.app */;
+			productReference = 8D1107320486CEB800E47090 /* PixelFucker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -328,7 +328,7 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Aviator" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PixelFucker" */;
 			compatibilityVersion = "Xcode 3.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -342,7 +342,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D1107260486CEB800E47090 /* Aviator */,
+				8D1107260486CEB800E47090 /* PixelFucker */,
 			);
 		};
 /* End PBXProject section */
@@ -363,8 +363,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00C235CC10FE32E300223CDC /* Aviator.cpp in Sources */,
-				0C0FFC4A13F1055E003D5B4D /* AviatorBridge.cpp in Sources */,
+				00C235CC10FE32E300223CDC /* PixelFucker.cpp in Sources */,
+				0C0FFC4A13F1055E003D5B4D /* LuaBridge.cpp in Sources */,
 				0C0FFC4B13F1055E003D5B4D /* LuaState.cpp in Sources */,
 				0C0FFD4013F24B31003D5B4D /* OscBundle.cpp in Sources */,
 				0C0FFD4113F24B31003D5B4D /* OscListener.cpp in Sources */,
@@ -374,7 +374,7 @@
 				0CE11C3B146902B300B63246 /* Drawing.cpp in Sources */,
 				0CE11C3E146902C200B63246 /* core.lua in Sources */,
 				0CE11CC3146908B400B63246 /* Drawing.tolua.cpp in Sources */,
-				0CE11CCE1469145A00B63246 /* AviatorBinding.cpp in Sources */,
+				0CE11CCE1469145A00B63246 /* CoreBinding.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,7 +396,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Aviator_Prefix.pch;
+				GCC_PREFIX_HEADER = PixelFucker_Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
@@ -412,7 +412,7 @@
 					"/usr/local/lib/lib/libtolua++5.1.a",
 					../../../lib/libcinder_d.a,
 				);
-				PRODUCT_NAME = Aviator;
+				PRODUCT_NAME = PixelFucker;
 				STRIP_STYLE = "non-global";
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
@@ -431,7 +431,7 @@
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Aviator_Prefix.pch;
+				GCC_PREFIX_HEADER = PixelFucker_Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
@@ -441,7 +441,7 @@
 					"\"$(SRCROOT)/../../../blocks/osc/lib/macosx\"",
 				);
 				OTHER_LDFLAGS = "$(CINDER_PATH)/lib/libcinder.a";
-				PRODUCT_NAME = Aviator;
+				PRODUCT_NAME = PixelFucker;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -493,7 +493,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Aviator" */ = {
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "PixelFucker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4B08A954540054247B /* Debug */,
@@ -502,7 +502,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Aviator" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PixelFucker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,

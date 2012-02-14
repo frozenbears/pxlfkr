@@ -1,7 +1,6 @@
 
 function setup()
-	print("Hello from Aviator embedded!")
-	print("That's right, beetches!!")
+	print("Welcome to PixelFucker")
 end
 
 function update()

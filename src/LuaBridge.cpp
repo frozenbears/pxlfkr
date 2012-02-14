@@ -1,40 +1,40 @@
 
 
-#include "AviatorBridge.h"
+#include "LuaBridge.h"
 #include "cinder/app/App.h"
 #include "cinder/CinderResources.h"
 
 #include "OSCMessageTable.h"
-#include "AviatorBinding.h"
+#include "CoreBindings.h"
 
 using namespace ci;
 using namespace ci::app;
 
-void AviatorBridge::load(std::string fname) {
+void LuaBridge::load(std::string fname) {
 	lua.doFile(App::getResourcePath(fname));
 }
 
-void AviatorBridge::hello() {
+void LuaBridge::hello() {
    load("test.lua");
 }
 
-void AviatorBridge::setup() {
-	AviatorBinding binding;
-	lua.bind(binding);
+void LuaBridge::setup() {
+	CoreBindings bindings;
+	lua.bind(bindings);
 	
 	load("core.lua");
 	lua.callFunction("setup");
 }
 
-void AviatorBridge::update() {
+void LuaBridge::update() {
 	lua.callFunction("update");
 }
 
-void AviatorBridge::draw() {
+void LuaBridge::draw() {
 	lua.callFunction("draw");
 }
 
-void AviatorBridge::handleMessage(osc::Message message) {
+void LuaBridge::handleMessage(osc::Message message) {
 	OSCMessageTable table = OSCMessageTable(message);
 	lua.callFunction("handleMessage", table);
 }
