@@ -19,11 +19,17 @@ local function do_function(func, environment, args)
 	else
 		local status, message = pcall(func)
 		if not status then print(message) end
+		return status, message
 	end
 end
 
 function execute(code, environment)
 	local func, message = loadstring(code)
-	if not func then return nil, message end
-	do_function(func, environment)
+	
+	if not func then 
+		print(message)
+		return nil, message 
+	end
+	
+	return do_function(func, environment)
 end
