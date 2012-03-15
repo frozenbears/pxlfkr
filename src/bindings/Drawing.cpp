@@ -18,4 +18,3 @@ void line(int startx, int starty, int endx, int endy) {
 void solidCircle(int centerx, int centery, int radius, int numsegments) {
 	gl::drawSolidCircle(Vec2f(centerx, centery), radius, numsegments); 
 }
-

@@ -36,5 +36,5 @@ void LuaBridge::draw() {
 
 void LuaBridge::handleMessage(osc::Message message) {
 	OSCMessageTable table = OSCMessageTable(message);
-	lua.callFunction("handleMessage", table);
+	lua.callFunction("osc", table);
 }

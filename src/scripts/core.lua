@@ -1,25 +1,46 @@
 
+--TODO: do this corrctly
+package.path = package.path .. ';PixelFucker.app/Contents/Resources/?.lua'
+
+require 'routing'
+require 'slab'
+
+local routing = pf.routing
+local slab = pf.slab
+
 function setup()
 	print("Welcome to PixelFucker")
+	
+	slab.add_layer("test")
+	
+	routing.route{address = "/inject",
+		  action = function(code)
+					 slab.inject("test", code)
+				   end
+	}
+	
+	routing.route{address = "/set",
+		  action = function(key, value)
+					 slab.set("test", key, value)
+				   end
+	}
+	
+	routing.route{address = "/clear",
+		  action = function()
+					 slab.clear("test")
+				   end
+	}
+	
 end
 
 function update()
+	slab.update()
 end
-
 
 function draw()
-	for i=1,3 do
-		color(math.random(), math.random(), math.random(), 1.0)
-		line(7,0, math.random(120, 560), math.random(100, 800))
-		solidCircle(math.random(0, 40), math.random(0,878), 16, 15)
-	end
+	slab.draw()
 end
 
-function handleMessage(message)
-	print("handleMessage")
-	print("address", message.address)
-	print("args:")
-	for k, v in ipairs(message) do
-		print(k, v)
-	end
+function osc(message)
+	routing.handle_message(message)
 end
