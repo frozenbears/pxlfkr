@@ -33,9 +33,16 @@ function setup()
 	
 	routing.route{address = "/control",
 		  action = function(controller, value)
-					 slab.control(controller, value)
+					 slab.control("test", controller, value)
 				   end
 	}
+	
+	routing.route{address = "/load",
+		  action = function(name)
+					 slab.load("test", name)
+				   end
+	}
+	
 	
 end
 

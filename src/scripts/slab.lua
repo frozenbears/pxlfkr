@@ -50,13 +50,24 @@ function bind_controller(controller, fn)
     controllers[controller] = fn
 end
 
-function control(controller, value)
-	for id, binding in pairs(controllers) do
+function control(id, controller, value)
+	for _id, binding in pairs(controllers) do
 		if binding[controller] then
 			controllers[id][controller](value)
 		end
 	end
 		
+end
+
+function load(id, name)
+	local name = name..".lua"
+	local path = "/Users/"..os.getenv("USER").."/.pf/devices/"..name 
+	
+	io.input(path)
+	local code = io.read("*all")
+	
+	clear(id)
+	inject(id, code)
 end
 
 function update()
