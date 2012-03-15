@@ -31,6 +31,12 @@ function setup()
 				   end
 	}
 	
+	routing.route{address = "/control",
+		  action = function(controller, value)
+					 slab.control(controller, value)
+				   end
+	}
+	
 end
 
 function update()
