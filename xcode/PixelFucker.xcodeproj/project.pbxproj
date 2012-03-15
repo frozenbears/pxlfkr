@@ -14,6 +14,10 @@
 		00C93A0C0ECCEED2000238B1 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C93A0B0ECCEED2000238B1 /* QuickTime.framework */; };
 		00CDB2C911781D8700F1AEE2 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00CDB2C811781D8700F1AEE2 /* AudioUnit.framework */; };
 		00CDB2DB11781E1E00F1AEE2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00CDB2DA11781E1E00F1AEE2 /* AudioToolbox.framework */; };
+		0C03529F14EE1AE300A19D9F /* sandbox.lua in Sources */ = {isa = PBXBuildFile; fileRef = 0C03529E14EE1AE300A19D9F /* sandbox.lua */; };
+		0C0352AE14EE1AF500A19D9F /* sandbox.lua in Resources */ = {isa = PBXBuildFile; fileRef = 0C03529E14EE1AE300A19D9F /* sandbox.lua */; };
+		0C0352EA14EE2D5A00A19D9F /* Text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0352E914EE2D5A00A19D9F /* Text.cpp */; };
+		0C03532914EE4B6300A19D9F /* Text.tolua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C03532714EE4B6300A19D9F /* Text.tolua.cpp */; };
 		0C0FFC4A13F1055E003D5B4D /* LuaBridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0FFC4613F1055E003D5B4D /* LuaBridge.cpp */; };
 		0C0FFC4B13F1055E003D5B4D /* LuaState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0FFC4813F1055E003D5B4D /* LuaState.cpp */; };
 		0C0FFD2D13F24B31003D5B4D /* osc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0FFCFD13F24B31003D5B4D /* osc.a */; };
@@ -22,6 +26,9 @@
 		0C0FFD4213F24B31003D5B4D /* OscMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0FFD2A13F24B31003D5B4D /* OscMessage.cpp */; };
 		0C0FFD4313F24B31003D5B4D /* OscSender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0FFD2B13F24B31003D5B4D /* OscSender.cpp */; };
 		0C0FFDA413F4CE96003D5B4D /* OSCMessageTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0FFDA313F4CE96003D5B4D /* OSCMessageTable.cpp */; };
+		0CCCA54A14ECDD8A00929768 /* routing.lua in Resources */ = {isa = PBXBuildFile; fileRef = 0CCCA54914ECDD8A00929768 /* routing.lua */; };
+		0CCCA5DB14ECF9E400929768 /* slab.lua in Sources */ = {isa = PBXBuildFile; fileRef = 0CCCA5DA14ECF9E400929768 /* slab.lua */; };
+		0CCCA5E414ECFA0A00929768 /* slab.lua in Resources */ = {isa = PBXBuildFile; fileRef = 0CCCA5DA14ECF9E400929768 /* slab.lua */; };
 		0CE11C3B146902B300B63246 /* Drawing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CE11C39146902B300B63246 /* Drawing.cpp */; };
 		0CE11C3E146902C200B63246 /* core.lua in Sources */ = {isa = PBXBuildFile; fileRef = 0CE11C3D146902C200B63246 /* core.lua */; };
 		0CE11CC3146908B400B63246 /* Drawing.tolua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CE11CC2146908B400B63246 /* Drawing.tolua.cpp */; };
@@ -38,6 +45,11 @@
 		00C93A0B0ECCEED2000238B1 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
 		00CDB2C811781D8700F1AEE2 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		00CDB2DA11781E1E00F1AEE2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		0C03529E14EE1AE300A19D9F /* sandbox.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lua; path = sandbox.lua; sourceTree = "<group>"; };
+		0C0352E814EE2D5A00A19D9F /* Text.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Text.h; sourceTree = "<group>"; };
+		0C0352E914EE2D5A00A19D9F /* Text.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Text.cpp; sourceTree = "<group>"; };
+		0C03532714EE4B6300A19D9F /* Text.tolua.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Text.tolua.cpp; sourceTree = "<group>"; };
+		0C03532814EE4B6300A19D9F /* Text.tolua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Text.tolua.h; sourceTree = "<group>"; };
 		0C0FFC4613F1055E003D5B4D /* LuaBridge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LuaBridge.cpp; path = ../src/LuaBridge.cpp; sourceTree = SOURCE_ROOT; };
 		0C0FFC4713F1055E003D5B4D /* LuaBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LuaBridge.h; path = ../src/LuaBridge.h; sourceTree = SOURCE_ROOT; };
 		0C0FFC4813F1055E003D5B4D /* LuaState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LuaState.cpp; path = ../src/LuaState.cpp; sourceTree = SOURCE_ROOT; };
@@ -68,6 +80,8 @@
 		0C0FFDA213F4CE96003D5B4D /* OSCMessageTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSCMessageTable.h; path = ../src/OSCMessageTable.h; sourceTree = SOURCE_ROOT; };
 		0C0FFDA313F4CE96003D5B4D /* OSCMessageTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OSCMessageTable.cpp; path = ../src/OSCMessageTable.cpp; sourceTree = SOURCE_ROOT; };
 		0C0FFDA513F4D4F8003D5B4D /* LuaValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LuaValue.h; path = ../src/LuaValue.h; sourceTree = SOURCE_ROOT; };
+		0CCCA54914ECDD8A00929768 /* routing.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lua; path = routing.lua; sourceTree = "<group>"; };
+		0CCCA5DA14ECF9E400929768 /* slab.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lua; path = slab.lua; sourceTree = "<group>"; };
 		0CE11C39146902B300B63246 /* Drawing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Drawing.cpp; sourceTree = "<group>"; };
 		0CE11C3A146902B300B63246 /* Drawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drawing.h; sourceTree = "<group>"; };
 		0CE11C3D146902C200B63246 /* core.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lua; path = core.lua; sourceTree = "<group>"; };
@@ -202,10 +216,14 @@
 		0CE11C38146902B300B63246 /* bindings */ = {
 			isa = PBXGroup;
 			children = (
+				0C03532714EE4B6300A19D9F /* Text.tolua.cpp */,
+				0C03532814EE4B6300A19D9F /* Text.tolua.h */,
 				0CE11CC414690BDE00B63246 /* Drawing.tolua.h */,
 				0CE11CC2146908B400B63246 /* Drawing.tolua.cpp */,
 				0CE11C39146902B300B63246 /* Drawing.cpp */,
 				0CE11C3A146902B300B63246 /* Drawing.h */,
+				0C0352E814EE2D5A00A19D9F /* Text.h */,
+				0C0352E914EE2D5A00A19D9F /* Text.cpp */,
 			);
 			name = bindings;
 			path = ../src/bindings;
@@ -215,6 +233,9 @@
 			isa = PBXGroup;
 			children = (
 				0CE11C3D146902C200B63246 /* core.lua */,
+				0CCCA54914ECDD8A00929768 /* routing.lua */,
+				0CCCA5DA14ECF9E400929768 /* slab.lua */,
+				0C03529E14EE1AE300A19D9F /* sandbox.lua */,
 			);
 			name = scripts;
 			path = ../src/scripts;
@@ -352,7 +373,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C0352AE14EE1AF500A19D9F /* sandbox.lua in Resources */,
+				0CCCA5E414ECFA0A00929768 /* slab.lua in Resources */,
 				0CE11D4114691A3400B63246 /* core.lua in Resources */,
+				0CCCA54A14ECDD8A00929768 /* routing.lua in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +399,10 @@
 				0CE11C3E146902C200B63246 /* core.lua in Sources */,
 				0CE11CC3146908B400B63246 /* Drawing.tolua.cpp in Sources */,
 				0CE11CCE1469145A00B63246 /* CoreBinding.cpp in Sources */,
+				0CCCA5DB14ECF9E400929768 /* slab.lua in Sources */,
+				0C03529F14EE1AE300A19D9F /* sandbox.lua in Sources */,
+				0C0352EA14EE2D5A00A19D9F /* Text.cpp in Sources */,
+				0C03532914EE4B6300A19D9F /* Text.tolua.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
