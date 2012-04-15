@@ -26,6 +26,8 @@
 		0C0FFD4213F24B31003D5B4D /* OscMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0FFD2A13F24B31003D5B4D /* OscMessage.cpp */; };
 		0C0FFD4313F24B31003D5B4D /* OscSender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0FFD2B13F24B31003D5B4D /* OscSender.cpp */; };
 		0C0FFDA413F4CE96003D5B4D /* OSCMessageTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0FFDA313F4CE96003D5B4D /* OSCMessageTable.cpp */; };
+		0C3A14A315328EE000ADDD5D /* FrameBuffer.tolua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C3A14A115328EE000ADDD5D /* FrameBuffer.tolua.cpp */; };
+		0CA293B0151454BD00086709 /* FrameBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CA293AF151454BD00086709 /* FrameBuffer.cpp */; };
 		0CCCA54A14ECDD8A00929768 /* routing.lua in Resources */ = {isa = PBXBuildFile; fileRef = 0CCCA54914ECDD8A00929768 /* routing.lua */; };
 		0CCCA5DB14ECF9E400929768 /* slab.lua in Sources */ = {isa = PBXBuildFile; fileRef = 0CCCA5DA14ECF9E400929768 /* slab.lua */; };
 		0CCCA5E414ECFA0A00929768 /* slab.lua in Resources */ = {isa = PBXBuildFile; fileRef = 0CCCA5DA14ECF9E400929768 /* slab.lua */; };
@@ -80,6 +82,10 @@
 		0C0FFDA213F4CE96003D5B4D /* OSCMessageTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSCMessageTable.h; path = ../src/OSCMessageTable.h; sourceTree = SOURCE_ROOT; };
 		0C0FFDA313F4CE96003D5B4D /* OSCMessageTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OSCMessageTable.cpp; path = ../src/OSCMessageTable.cpp; sourceTree = SOURCE_ROOT; };
 		0C0FFDA513F4D4F8003D5B4D /* LuaValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LuaValue.h; path = ../src/LuaValue.h; sourceTree = SOURCE_ROOT; };
+		0C3A14A115328EE000ADDD5D /* FrameBuffer.tolua.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FrameBuffer.tolua.cpp; sourceTree = "<group>"; };
+		0C3A14A215328EE000ADDD5D /* FrameBuffer.tolua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameBuffer.tolua.h; sourceTree = "<group>"; };
+		0CA293AE151454BD00086709 /* FrameBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameBuffer.h; sourceTree = "<group>"; };
+		0CA293AF151454BD00086709 /* FrameBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FrameBuffer.cpp; sourceTree = "<group>"; };
 		0CCCA54914ECDD8A00929768 /* routing.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lua; path = routing.lua; sourceTree = "<group>"; };
 		0CCCA5DA14ECF9E400929768 /* slab.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lua; path = slab.lua; sourceTree = "<group>"; };
 		0CE11C39146902B300B63246 /* Drawing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Drawing.cpp; sourceTree = "<group>"; };
@@ -224,6 +230,10 @@
 				0CE11C3A146902B300B63246 /* Drawing.h */,
 				0C0352E814EE2D5A00A19D9F /* Text.h */,
 				0C0352E914EE2D5A00A19D9F /* Text.cpp */,
+				0CA293AE151454BD00086709 /* FrameBuffer.h */,
+				0CA293AF151454BD00086709 /* FrameBuffer.cpp */,
+				0C3A14A215328EE000ADDD5D /* FrameBuffer.tolua.h */,
+				0C3A14A115328EE000ADDD5D /* FrameBuffer.tolua.cpp */,
 			);
 			name = bindings;
 			path = ../src/bindings;
@@ -403,6 +413,8 @@
 				0C03529F14EE1AE300A19D9F /* sandbox.lua in Sources */,
 				0C0352EA14EE2D5A00A19D9F /* Text.cpp in Sources */,
 				0C03532914EE4B6300A19D9F /* Text.tolua.cpp in Sources */,
+				0CA293B0151454BD00086709 /* FrameBuffer.cpp in Sources */,
+				0C3A14A315328EE000ADDD5D /* FrameBuffer.tolua.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
