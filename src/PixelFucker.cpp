@@ -9,7 +9,6 @@
 #include "OscListener.h"
 
 #include "LuaBridge.h"
-#include "Text.h"
 
 #define PORT 12345
 
@@ -31,8 +30,8 @@ public:
 	void draw();
 	
 	osc::Listener listener;
-	Text testText;
     LuaBridge luaBridge;
+	
 };
 
 #pragma mark Events
@@ -59,11 +58,6 @@ void PixelFucker::setup()
 	
 	listener.setup(PORT);
 	luaBridge.setup();
-	
-	//testText.setColor(1, 1, 1, 1);
-	//testText.setFont("Helvetica", 100);
-	//testText.addLine("hi there");
-	//testText.render();
 }
 
 void PixelFucker::update()
@@ -75,19 +69,17 @@ void PixelFucker::update()
 	}
 		
 	luaBridge.update();
-	
 }
 
 void PixelFucker::draw()
 {
-	//clear the screen, enable alpha
+	
 	gl::clear( Color( 0, 0, 0 ) );
+
+	//clear the screen, enable alpha
 	gl::enableAlphaBlending();
 	
 	luaBridge.draw();
-	
-	//testText.draw(100, 100);
 }
 
-//DO IT
 CINDER_APP_BASIC( PixelFucker, RendererGl );

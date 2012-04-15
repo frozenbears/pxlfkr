@@ -29,7 +29,7 @@ void OSCMessageTable::push(lua_State *L) {
 				std::cout << "OSCMessageTable: Exception reading argument as int32" << std::endl;
 			}
 			
-		}else if (message.getArgType(i) == cinder::osc::TYPE_FLOAT){
+		} else if (message.getArgType(i) == cinder::osc::TYPE_FLOAT){
 			try {
 				lua_pushnumber(L, (double)i+1);
 				lua_pushnumber(L, (double)message.getArgAsFloat(i));
@@ -39,7 +39,7 @@ void OSCMessageTable::push(lua_State *L) {
 			catch (...) {
 				std::cout << "OSCMessageTable: Exception reading argument as float" << std::endl;
 			}
-		}else if (message.getArgType(i) == cinder::osc::TYPE_STRING){
+		} else if (message.getArgType(i) == cinder::osc::TYPE_STRING){
 			try {
 				lua_pushnumber(L, (double)i+1);
 				lua_pushstring(L, message.getArgAsString(i).c_str());
