@@ -7,9 +7,6 @@
 class LuaBridge {
 	
 public:
-	
-	void hello(); //load test.lua
-	
 	//hooks for the run loop
 	void setup();
 	void update();

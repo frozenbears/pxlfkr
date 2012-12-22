@@ -14,10 +14,6 @@ void LuaBridge::load(std::string fname) {
 	lua.doFile(App::getResourcePath(fname));
 }
 
-void LuaBridge::hello() {
-   load("test.lua");
-}
-
 void LuaBridge::setup() {
 	CoreBindings bindings;
 	lua.bind(bindings);
