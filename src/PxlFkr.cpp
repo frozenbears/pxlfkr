@@ -10,6 +10,7 @@
 
 #include "LuaBridge.h"
 
+//TODO: pick a non-ridiculous port number
 #define PORT 12345
 
 using namespace ci;
@@ -18,7 +19,7 @@ using namespace std;
 
 #pragma mark App
 
-class PixelFucker : public AppBasic {
+class PxlFkr : public AppBasic {
 
 public:
 
@@ -36,22 +37,21 @@ public:
 
 #pragma mark Events
 
-void PixelFucker::keyDown( KeyEvent event )
+void PxlFkr::keyDown( KeyEvent event )
 {
-	//Todo: change to ESC
 	if( event.getCode() == KeyEvent::KEY_ESCAPE ) {
 		setFullScreen( ! isFullScreen() );
 	}
 }
 
-void PixelFucker::fileDrop( FileDropEvent event )
+void PxlFkr::fileDrop( FileDropEvent event )
 {
 	//we may as well support this event at some point
 }
 
 #pragma mark Run Loop
 
-void PixelFucker::setup()
+void PxlFkr::setup()
 {
 	// Todo: enable resize from lua
 	setWindowSize(1024, 768);
@@ -60,7 +60,7 @@ void PixelFucker::setup()
 	luaBridge.setup();
 }
 
-void PixelFucker::update()
+void PxlFkr::update()
 {
 	while (listener.hasWaitingMessages()) {
 		osc::Message message;
@@ -71,9 +71,8 @@ void PixelFucker::update()
 	luaBridge.update();
 }
 
-void PixelFucker::draw()
+void PxlFkr::draw()
 {
-	
 	gl::clear( Color( 0, 0, 0 ) );
 
 	//clear the screen, enable alpha
@@ -82,4 +81,4 @@ void PixelFucker::draw()
 	luaBridge.draw();
 }
 
-CINDER_APP_BASIC( PixelFucker, RendererGl );
+CINDER_APP_BASIC( PxlFkr, RendererGl );

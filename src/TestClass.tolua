@@ -1,8 +1,0 @@
-
-class TestClass {
-	
-public:
-	TestClass();
-	virtual ~TestClass();
-	void hello();
-};

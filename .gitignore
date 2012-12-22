@@ -10,3 +10,4 @@ Distribution/
 build/
 xcuserdata/
 *.xcworkspace/
+*.pch
