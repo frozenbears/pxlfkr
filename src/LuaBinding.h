@@ -10,5 +10,6 @@ extern "C" {
 class LuaBinding {
 	
 public:
+	virtual ~LuaBinding() {};
 	virtual void open(lua_State *L) = 0;
 };
