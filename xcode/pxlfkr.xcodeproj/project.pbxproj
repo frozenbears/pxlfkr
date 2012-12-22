@@ -29,6 +29,7 @@
 		0CAB2572168527F4007067D9 /* OscListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB255B168527F3007067D9 /* OscListener.cpp */; };
 		0CAB2573168527F4007067D9 /* OscMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB255C168527F3007067D9 /* OscMessage.cpp */; };
 		0CAB2574168527F4007067D9 /* OscSender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB255D168527F3007067D9 /* OscSender.cpp */; };
+		0CAB25BE16855429007067D9 /* MoviePlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB25BD16855429007067D9 /* MoviePlayer.cpp */; };
 		0CCCA54A14ECDD8A00929768 /* routing.lua in Resources */ = {isa = PBXBuildFile; fileRef = 0CCCA54914ECDD8A00929768 /* routing.lua */; };
 		0CCCA5DB14ECF9E400929768 /* slab.lua in Sources */ = {isa = PBXBuildFile; fileRef = 0CCCA5DA14ECF9E400929768 /* slab.lua */; };
 		0CCCA5E414ECFA0A00929768 /* slab.lua in Resources */ = {isa = PBXBuildFile; fileRef = 0CCCA5DA14ECF9E400929768 /* slab.lua */; };
@@ -89,6 +90,8 @@
 		0CAB255B168527F3007067D9 /* OscListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OscListener.cpp; sourceTree = "<group>"; };
 		0CAB255C168527F3007067D9 /* OscMessage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OscMessage.cpp; sourceTree = "<group>"; };
 		0CAB255D168527F3007067D9 /* OscSender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OscSender.cpp; sourceTree = "<group>"; };
+		0CAB25BC16855429007067D9 /* MoviePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayer.h; sourceTree = "<group>"; };
+		0CAB25BD16855429007067D9 /* MoviePlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MoviePlayer.cpp; sourceTree = "<group>"; };
 		0CCCA54914ECDD8A00929768 /* routing.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lua; path = routing.lua; sourceTree = "<group>"; };
 		0CCCA5DA14ECF9E400929768 /* slab.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lua; path = slab.lua; sourceTree = "<group>"; };
 		0CE11C39146902B300B63246 /* Drawing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Drawing.cpp; sourceTree = "<group>"; };
@@ -247,6 +250,8 @@
 				0C3A14A115328EE000ADDD5D /* FrameBuffer.tolua.cpp */,
 				0C269FC2153B7D3200D400AB /* Shader.h */,
 				0C269FC3153B7D3200D400AB /* Shader.cpp */,
+				0CAB25BC16855429007067D9 /* MoviePlayer.h */,
+				0CAB25BD16855429007067D9 /* MoviePlayer.cpp */,
 			);
 			name = bindings;
 			path = ../src/bindings;
@@ -429,6 +434,7 @@
 				0CAB2572168527F4007067D9 /* OscListener.cpp in Sources */,
 				0CAB2573168527F4007067D9 /* OscMessage.cpp in Sources */,
 				0CAB2574168527F4007067D9 /* OscSender.cpp in Sources */,
+				0CAB25BE16855429007067D9 /* MoviePlayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

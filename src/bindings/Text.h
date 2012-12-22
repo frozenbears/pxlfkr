@@ -8,7 +8,6 @@
 class Text {
 
 public:
-	
 	void clear(float r, float g, float b, float a);
 	void setColor(float r, float g, float b, float a);
 	void setFont(const std::string& name, float pointSize);
