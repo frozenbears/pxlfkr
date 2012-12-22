@@ -25,7 +25,6 @@ local function create_layer(id)
 end
 
 function add_layer(id)
-	print ("add layer " .. id)
 	layers[id] = create_layer(id)
 end
 

@@ -1,6 +1,6 @@
 
 --TODO: do this corrctly
-package.path = package.path .. ';PixelFucker.app/Contents/Resources/?.lua'
+package.path = package.path .. ';pxlfkr.app/Contents/Resources/?.lua'
 
 require 'routing'
 require 'slab'
@@ -9,7 +9,7 @@ local routing = pf.routing
 local slab = pf.slab
 
 function setup()
-	print("Welcome to PixelFucker")
+	print("welcome to pxlfkr")
 	
 	slab.add_layer("test")
 	
@@ -42,8 +42,6 @@ function setup()
 					 slab.load("test", name)
 				   end
 	}
-	
-	
 end
 
 function update()
