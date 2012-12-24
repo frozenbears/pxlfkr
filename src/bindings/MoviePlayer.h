@@ -5,7 +5,7 @@
 
 class MoviePlayer {
 	
-public:
+public:	
 	void load(const std::string& path);
 	
 	bool isPlayable();

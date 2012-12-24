@@ -7,123 +7,215 @@ using namespace ci;
 using namespace ci::app;
 
 void MoviePlayer::load(const std::string& path) {
-	mMovie = qtime::MovieGl(path);
+	try {
+		mMovie = qtime::MovieGl(path);
+	} catch (qtime::QuickTimePathInvalidExc &ex) {
+		cout << "Invalid movie path: " << path << endl;
+	}
 }
 
 bool MoviePlayer::isPlayable() {
-	return mMovie.checkPlayable(); //naming?
+	if (mMovie) {
+		return mMovie.checkPlayable();
+	} else {
+		return false;
+	}
 }
 
 int MoviePlayer::getWidth() {
-	return mMovie.getWidth();
+	if (mMovie) {
+		return mMovie.getWidth();
+	} else {
+		return 0;
+	}
 }
 
 int MoviePlayer::getHeight() {
-	return mMovie.getHeight();
+	if (mMovie) {
+		return mMovie.getHeight();
+	} else {
+		return 0;
+	}
 }
 
 float MoviePlayer::getAspectRatio() {
-	return mMovie.getAspectRatio();
+	if (mMovie) {
+		return mMovie.getAspectRatio();
+	} else {
+		return 0.0f;
+	}
 }
 
 float MoviePlayer::getPixelAspectRatio() {
-	return mMovie.getPixelAspectRatio();
+	if (mMovie) {
+		return mMovie.getPixelAspectRatio();
+	} else {
+		return 0.0f;
+	}
 }
 
 float MoviePlayer::getDuration() {
-	return mMovie.getDuration();
+	if (mMovie) {
+		return mMovie.getDuration();
+	} else {
+		return 0.0f;
+	}
 }
 
 float MoviePlayer::getFramerate() {
-	return mMovie.getFramerate();
+	if (mMovie) {
+		return mMovie.getFramerate();
+	} else {
+		return 0.0f;
+	}
 }
 
 int MoviePlayer::getNumFrames() {
-	return mMovie.getNumFrames();
+	if (mMovie) {
+		return mMovie.getNumFrames();
+	} else {
+		return 0;
+	}
 }
 
 bool MoviePlayer::hasAlpha() {
-	return mMovie.hasAlpha();
+	if (mMovie) {
+		return mMovie.hasAlpha();
+	} else {
+		return false;
+	}
 }
 
 bool MoviePlayer::hasVisuals() {
-	return mMovie.hasVisuals();
+	if (mMovie) {
+		return mMovie.hasVisuals();
+	} else {
+		return false;
+	}
 }
 
 bool MoviePlayer::hasAudio() {
-	return mMovie.hasAudio();
+	if (mMovie) {
+		return mMovie.hasAudio();
+	} else {
+		return false;
+	}
 }
 
 float MoviePlayer::getCurrentTime() {
-	return mMovie.getCurrentTime();
+	if (mMovie) {
+		return mMovie.getCurrentTime();
+	} else {
+		return 0.0f;
+	}
 }
 
 void MoviePlayer::seekToTime(float seconds) {
-	mMovie.seekToTime(seconds);
+	if (mMovie) {
+		mMovie.seekToTime(seconds);
+	}
 }
 
 void MoviePlayer::seekToFrame(int frame) {
-	mMovie.seekToFrame(frame);
+	if (mMovie) {
+		mMovie.seekToFrame(frame);
+	}
 }
 
 void MoviePlayer::seekToStart() {
-	mMovie.seekToStart();
+	if (mMovie) {
+		mMovie.seekToStart();
+	}
 }
 
 void MoviePlayer::seekToEnd() {
-	mMovie.seekToEnd();
+	if (mMovie) {
+		mMovie.seekToEnd();
+	}
 }
 
 void MoviePlayer::setActiveSegment(float startTime, float duration) {
-	mMovie.setActiveSegment(startTime, duration);
+	if (mMovie) {
+		mMovie.setActiveSegment(startTime, duration);
+	}
 }
 
 void MoviePlayer::resetActiveSegment() {
-	mMovie.resetActiveSegment();
+	if (mMovie) {
+		mMovie.resetActiveSegment();
+	}
 }
 
 void MoviePlayer::setLoop(bool loop, bool pingpong) {
-	mMovie.setLoop(loop, pingpong); //can tolua++ handle implicit arguments?
+	if (mMovie) {
+		mMovie.setLoop(loop, pingpong); //can tolua++ handle implicit arguments?
+	}
 }
 
 void MoviePlayer::stepForward() {
-	mMovie.stepForward();
+	if (mMovie) {
+		mMovie.stepForward();
+	}
 }
 
 void MoviePlayer::stepBackward() {
-	mMovie.stepBackward();
+	if (mMovie) {
+		mMovie.stepBackward();
+	}
 }
 
 void MoviePlayer::setRate(float rate) {
-	mMovie.setRate(rate);
+	if (mMovie) {
+		mMovie.setRate(rate);
+	}
 }
 
 void MoviePlayer::setVolume(float volume) {
-	mMovie.setVolume(volume);
+	if (mMovie) {
+		mMovie.setVolume(volume);
+	}
 }
 
 float MoviePlayer::getVolume() {
-	return mMovie.getVolume();
+	if (mMovie) {
+		return mMovie.getVolume();
+	} else {
+		return 0.0f;
+	}
 }
 
 bool MoviePlayer::isPlaying() {
-	return mMovie.isPlaying();
+	if (mMovie) {
+		return mMovie.isPlaying();
+	} else {
+		return false;
+	}
 }
 
 bool MoviePlayer::isDone() {
-	return mMovie.isDone();
+	if (mMovie) {
+		return mMovie.isDone();
+	} else {
+		return false;
+	}
 }
 
 void MoviePlayer::play() {
-	mMovie.play();
+	if (mMovie) {
+		mMovie.play();
+	}
 }
 
 void MoviePlayer::stop() {
-	mMovie.stop();
+	if (mMovie) {
+		mMovie.stop();
+	}
 }
 
 void MoviePlayer::draw(int x, int y, int sizex, int sizey) {
-	if (mMovie.getTexture()) {
-		gl::draw(mMovie.getTexture(), Rectf(x, y, x+sizex, sizey+y));
+	if (mMovie) {
+		if (mMovie.getTexture() != NULL) {
+			gl::draw(mMovie.getTexture(), Rectf(x, y, x+sizex, sizey+y));
+		}
 	}
 }
