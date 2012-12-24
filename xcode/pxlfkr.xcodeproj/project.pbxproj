@@ -23,6 +23,8 @@
 		0C0FFDA413F4CE96003D5B4D /* OSCMessageTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0FFDA313F4CE96003D5B4D /* OSCMessageTable.cpp */; };
 		0C269FC4153B7D3200D400AB /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C269FC3153B7D3200D400AB /* Shader.cpp */; };
 		0C3A14A315328EE000ADDD5D /* FrameBuffer.tolua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C3A14A115328EE000ADDD5D /* FrameBuffer.tolua.cpp */; };
+		0C664A4B1687EF1D002A4EF7 /* Shader.tolua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C664A4A1687EF1D002A4EF7 /* Shader.tolua.cpp */; };
+		0C664A8C1688005A002A4EF7 /* MoviePlayer.tolua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C664A8A1688005A002A4EF7 /* MoviePlayer.tolua.cpp */; };
 		0CA293B0151454BD00086709 /* FrameBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CA293AF151454BD00086709 /* FrameBuffer.cpp */; };
 		0CAB255E168527F3007067D9 /* osc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CAB252F168527F3007067D9 /* osc.a */; };
 		0CAB2571168527F4007067D9 /* OscBundle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB255A168527F3007067D9 /* OscBundle.cpp */; };
@@ -65,6 +67,10 @@
 		0C269FC3153B7D3200D400AB /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
 		0C3A14A115328EE000ADDD5D /* FrameBuffer.tolua.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FrameBuffer.tolua.cpp; sourceTree = "<group>"; };
 		0C3A14A215328EE000ADDD5D /* FrameBuffer.tolua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameBuffer.tolua.h; sourceTree = "<group>"; };
+		0C664A4A1687EF1D002A4EF7 /* Shader.tolua.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.tolua.cpp; sourceTree = "<group>"; };
+		0C664A671687F2C7002A4EF7 /* Shader.tolua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.tolua.h; sourceTree = "<group>"; };
+		0C664A8A1688005A002A4EF7 /* MoviePlayer.tolua.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MoviePlayer.tolua.cpp; sourceTree = "<group>"; };
+		0C664A8B1688005A002A4EF7 /* MoviePlayer.tolua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayer.tolua.h; sourceTree = "<group>"; };
 		0CA293AE151454BD00086709 /* FrameBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameBuffer.h; sourceTree = "<group>"; };
 		0CA293AF151454BD00086709 /* FrameBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FrameBuffer.cpp; sourceTree = "<group>"; };
 		0CAB2519168527F3007067D9 /* IpEndpointName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IpEndpointName.h; sourceTree = "<group>"; };
@@ -236,22 +242,26 @@
 		0CE11C38146902B300B63246 /* bindings */ = {
 			isa = PBXGroup;
 			children = (
-				0C03532714EE4B6300A19D9F /* Text.tolua.cpp */,
-				0C03532814EE4B6300A19D9F /* Text.tolua.h */,
 				0CE11CC414690BDE00B63246 /* Drawing.tolua.h */,
 				0CE11CC2146908B400B63246 /* Drawing.tolua.cpp */,
 				0CE11C39146902B300B63246 /* Drawing.cpp */,
 				0CE11C3A146902B300B63246 /* Drawing.h */,
 				0C0352E814EE2D5A00A19D9F /* Text.h */,
 				0C0352E914EE2D5A00A19D9F /* Text.cpp */,
+				0C03532814EE4B6300A19D9F /* Text.tolua.h */,
+				0C03532714EE4B6300A19D9F /* Text.tolua.cpp */,
 				0CA293AE151454BD00086709 /* FrameBuffer.h */,
 				0CA293AF151454BD00086709 /* FrameBuffer.cpp */,
 				0C3A14A215328EE000ADDD5D /* FrameBuffer.tolua.h */,
 				0C3A14A115328EE000ADDD5D /* FrameBuffer.tolua.cpp */,
 				0C269FC2153B7D3200D400AB /* Shader.h */,
 				0C269FC3153B7D3200D400AB /* Shader.cpp */,
+				0C664A671687F2C7002A4EF7 /* Shader.tolua.h */,
+				0C664A4A1687EF1D002A4EF7 /* Shader.tolua.cpp */,
 				0CAB25BC16855429007067D9 /* MoviePlayer.h */,
 				0CAB25BD16855429007067D9 /* MoviePlayer.cpp */,
+				0C664A8B1688005A002A4EF7 /* MoviePlayer.tolua.h */,
+				0C664A8A1688005A002A4EF7 /* MoviePlayer.tolua.cpp */,
 			);
 			name = bindings;
 			path = ../src/bindings;
@@ -435,6 +445,8 @@
 				0CAB2573168527F4007067D9 /* OscMessage.cpp in Sources */,
 				0CAB2574168527F4007067D9 /* OscSender.cpp in Sources */,
 				0CAB25BE16855429007067D9 /* MoviePlayer.cpp in Sources */,
+				0C664A4B1687EF1D002A4EF7 /* Shader.tolua.cpp in Sources */,
+				0C664A8C1688005A002A4EF7 /* MoviePlayer.tolua.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
