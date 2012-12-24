@@ -11,11 +11,8 @@ Shader::Shader(const string& vertexFile, const string& fragmentFile) {
 	try {
 		mShader = gl::GlslProg(loadResource(vertexFile), loadResource(fragmentFile));
 	} catch( gl::GlslProgCompileExc &exc ) {
-		std::cout << "Shader compile error: " << std::endl;
-		std::cout << exc.what();
-	}
-	  catch( ... ) {
-		std::cout << "Unable to load shader" << std::endl;
+		cout << "Shader compile error: " << endl;
+		cout << exc.what();
 	}
 }
 
