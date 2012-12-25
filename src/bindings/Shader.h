@@ -7,6 +7,7 @@ class Shader {
 
 public:
 	Shader(const std::string& vertexFile, const std::string& fragmentFile);
+	~Shader();
 	
 	void bind();
 	void unbind();
