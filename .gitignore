@@ -11,3 +11,5 @@ build/
 xcuserdata/
 *.xcworkspace/
 *.pch
+bin/pxlfkrDebug.app/
+bin/pxlfkr.app/
