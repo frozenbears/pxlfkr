@@ -35,15 +35,5 @@ class AppCore : ofxLuaListener {
 		// ofxLua error callback
 		void errorReceived(string& msg);
 		
-		// a bunch of api tests
-		void runTests();
-		
-		// script control
-		void reloadScript();
-		void nextScript();
-		void prevScript();
-		
 		ofxLua lua;
-		vector<string> scripts;
-		int currentScript;
 };
