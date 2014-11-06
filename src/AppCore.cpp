@@ -18,6 +18,7 @@ void AppCore::setup() {
 
     ofSetWindowTitle("p x l f k r");
     ofSetFrameRate(60);
+    ofSetEscapeQuitsApp(false);
 	
 	// init the lua state
 	lua.init();
