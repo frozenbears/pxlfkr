@@ -1,14 +1,6 @@
-/*
- * Copyright (c) 2012 Dan Wilcox <danomatika@gmail.com>
- *
- * BSD Simplified License.
- * For information on usage and redistribution, and for a DISCLAIMER OF ALL
- * WARRANTIES, see the file, "LICENSE.txt," in this distribution.
- *
- * See https://github.com/danomatika/ofxLua for documentation
- *
- */
+
 #include "AppCore.h"
+#include "OscMessageTable.h"
 
 //--------------------------------------------------------------
 void AppCore::setup() {
@@ -47,32 +39,13 @@ void AppCore::update() {
 		ofxOscMessage m;
         oscReceiver.getNextMessage(&m);
 
-        //pass it to the script layer
-
-        // for debugging purposes:
-        string msg_string;
-        msg_string = m.getAddress();
-        msg_string += ": ";
-        for(int i = 0; i < m.getNumArgs(); i++){
-            // get the argument type
-            msg_string += m.getArgTypeName(i);
-            msg_string += ":";
-            // display the argument - make sure we get the right type
-            if(m.getArgType(i) == OFXOSC_TYPE_INT32){
-                msg_string += ofToString(m.getArgAsInt32(i));
-            }
-            else if(m.getArgType(i) == OFXOSC_TYPE_FLOAT){
-                msg_string += ofToString(m.getArgAsFloat(i));
-            }
-            else if(m.getArgType(i) == OFXOSC_TYPE_STRING){
-                msg_string += m.getArgAsString(i);
-            }
-            else{
-                msg_string += "unknown";
-            }
+        OscMessageTable messageTable = OscMessageTable(m);
+        lua_getglobal(lua, "osc");
+        messageTable.push(lua);
+        if(lua_pcall(lua, 1, 0, 0) != 0) {
+            std::cerr << "Error calling osc function\n";
+            lua_pop(lua, 1);
         }
-
-        cout << "hohans: " << msg_string << "\n";
 	}
 }
 

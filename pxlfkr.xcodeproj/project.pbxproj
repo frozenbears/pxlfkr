@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C20DE351A0DE59700E30A6E /* OscMessageTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C20DE331A0DE59700E30A6E /* OscMessageTable.cpp */; };
 		0C8DE2DC1A0DDBCF00083878 /* 3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C8DE2D11A0DDBCF00083878 /* 3d.cpp */; };
 		0C8DE2DD1A0DDBCF00083878 /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C8DE2D21A0DDBCF00083878 /* App.cpp */; };
 		0C8DE2DE1A0DDBCF00083878 /* Events.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C8DE2D31A0DDBCF00083878 /* Events.cpp */; };
@@ -117,6 +118,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C20DE331A0DE59700E30A6E /* OscMessageTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OscMessageTable.cpp; sourceTree = "<group>"; };
+		0C20DE341A0DE59700E30A6E /* OscMessageTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OscMessageTable.h; sourceTree = "<group>"; };
+		0C20DE371A0DE85100E30A6E /* LuaValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuaValue.h; sourceTree = "<group>"; };
 		0C8DE2D11A0DDBCF00083878 /* 3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 3d.cpp; sourceTree = "<group>"; };
 		0C8DE2D21A0DDBCF00083878 /* App.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
 		0C8DE2D31A0DDBCF00083878 /* Events.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Events.cpp; sourceTree = "<group>"; };
@@ -447,6 +451,9 @@
 				E4B69E1F0A3A1BDC003C02F2 /* testApp.h */,
 				ED69EA839980FEAC69FB72F1 /* AppCore.cpp */,
 				2EECCB7DC6390C5F14543C6D /* AppCore.h */,
+				0C20DE331A0DE59700E30A6E /* OscMessageTable.cpp */,
+				0C20DE341A0DE59700E30A6E /* OscMessageTable.h */,
+				0C20DE371A0DE85100E30A6E /* LuaValue.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -585,6 +592,7 @@
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				0C9EC9F51A0B5731009632D1 /* ofxOscReceiver.cpp in Sources */,
 				0C9EC9ED1A0B5731009632D1 /* UdpSocketWin.cpp in Sources */,
+				0C20DE351A0DE59700E30A6E /* OscMessageTable.cpp in Sources */,
 				0C8DE2DE1A0DDBCF00083878 /* Events.cpp in Sources */,
 				0C8DE2DD1A0DDBCF00083878 /* App.cpp in Sources */,
 				0C9EC9F61A0B5731009632D1 /* ofxOscSender.cpp in Sources */,
