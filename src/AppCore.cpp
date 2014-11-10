@@ -38,12 +38,14 @@ void AppCore::update() {
 		// get the next message
 		ofxOscMessage m;
         oscReceiver.getNextMessage(&m);
-
         OscMessageTable messageTable = OscMessageTable(m);
+
+        // pass it to the scripting layer
         lua_getglobal(lua, "osc");
         messageTable.push(lua);
-        if(lua_pcall(lua, 1, 0, 0) != 0) {
-            std::cerr << "Error calling osc function\n";
+        if(lua_pcall(lua, 1, 0, 0)) {
+            std::cerr << "Error calling osc function:\n";
+            std::cerr << lua_tostring(lua, -1) << std::endl;
             lua_pop(lua, 1);
         }
 	}
@@ -66,7 +68,6 @@ void AppCore::exit() {
 
 //--------------------------------------------------------------
 void AppCore::keyPressed(int key) {
-	
 	switch(key) {
 		case OF_KEY_ESC:
 			ofToggleFullscreen();
@@ -98,5 +99,5 @@ void AppCore::mouseReleased(int x, int y, int button) {
 
 //--------------------------------------------------------------
 void AppCore::errorReceived(string& msg) {
-	cout << "Error: " << msg << endl;
+    std::cerr << "Error: " << msg << endl;
 }

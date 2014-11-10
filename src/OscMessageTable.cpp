@@ -4,7 +4,7 @@
 
 #include "OscMessageTable.h"
 
-OscMessageTable::OscMessageTable(ofxOscMessage& m) {
+OscMessageTable::OscMessageTable(const ofxOscMessage& m) {
 	message = m;
 }
 
@@ -15,7 +15,9 @@ void OscMessageTable::push(lua_State *L) {
 	//set the "address" field
 	lua_pushstring(L, "address");
 	lua_pushstring(L, message.getAddress().c_str());
-	lua_settable(L, -3); //this pops the key and value
+
+    // pop the key and value
+	lua_settable(L, -3);
 
 	for (int i = 0; i < message.getNumArgs(); i++) {
 

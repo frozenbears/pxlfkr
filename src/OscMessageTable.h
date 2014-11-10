@@ -6,7 +6,7 @@ class OscMessageTable : public LuaValue {
 
 public:
 
-	OscMessageTable(ofxOscMessage &m);
+	OscMessageTable(const ofxOscMessage &m);
 
 	void push(lua_State *L);
 
