@@ -1,96 +1,67 @@
 
-module("pf", package.seeall)
+module("pf.slab", package.seeall)
 
-require 'sandbox'
-require 'object'
+local sandbox = require 'sandbox'
 
-local Object = pf.Object;
-local Sandbox = pf.Sandbox
-
-Layer = Object:new()
-
-function Layer:inject(code)
-    self.sandbox:inject(code)
+function new()
+  local slab = {}
+  slab.layers = {}
+  return slab
 end
 
-function Layer:set(k, v)
-    self.sandbox:set(k, v)
+function layer()
+  local l = {}
+  l.environment = sandbox.environment()
+  return l
 end
 
-function Layer:setup()
-    self.sandbox:setup()
+function add_layer(slab, id)
+  slab.layers[id] = layer()
 end
 
-function Layer:update()
-    self.sandbox:update()
+function delete_layer(slab, id)
+  slab.layers[id] = nil
 end
 
-function Layer:draw()
-    self.sandbox:draw()
+function inject(slab, id, code)
+  if slab.layers[id] then
+    local layer = slab.layers[id]
+    sandbox.inject(layer.environment, code)
+  end
 end
 
--------------------------------------------
+function set(slab, id, key, value)
+  if slab.layers[id] then
+    local layer = slab.layers[id]
+    sandbox.set(layer.environment, key, value)
+  end
+end
 
-Slab = Object:new{layers={}, controllers={}}
-
-function Slab:create_layer(id)
-    self.controllers[id] = {}
+function load(slab, id, name)
+  local name = name..".lua"
+  local path = "/Users/"..os.getenv("USER").."/.pf/devices/"..name 
     
-    local sandbox = Sandbox:new{bind_controller = function(controller, fn)
-                                                      self.controllers[id][controller]=fn
-                                                  end
-    }
-    return Layer:new{sandbox = sandbox}
-end
-
-function Slab:add_layer(id)
-    self.layers[id] = self:create_layer(id)
-end
-
-function Slab:inject(id, code)
-    if self.layers[id] then
-        self.layers[id]:inject(code)
-    end
-end
-
-function Slab:set(id, key, value)
-    if self.layers[id] then
-        self.layers[id]:set(key, value)
-    end
-end
-
-function Slab:clear(id)
-    --this is the same as add_layer for the moment, but not for long
-    self.layers[id] = self:create_layer(id)
-end
-
-function Slab:control(id, controller, value)
-    for _id, binding in pairs(self.controllers) do
-        if binding[controller] then
-            self.controllers[id][controller](value)
-        end
-    end
-end
-
-function Slab:load(id, name)
-    local name = name..".lua"
-    local path = "/Users/"..os.getenv("USER").."/.pf/devices/"..name 
+  io.input(path)
+  local code = io.read("*all")
     
-    io.input(path)
-    local code = io.read("*all")
-    
-    self:clear(id)
-    self:inject(id, code)
+  clear(slab, id)
+  inject(slab, id, code)
 end
 
-function Slab:update()
-    for id,layer in pairs(self.layers) do
-        layer:update()
-    end
+function reset(slab)
+  slab.layers = {}
 end
-        
-function Slab:draw()
-    for id,layer in pairs(self.layers) do
-        layer:draw()
-    end
+
+function update(slab)
+  for id,layer in pairs(slab.layers) do
+    sandbox.update(layer.environment)
+  end
 end
+
+function draw(slab)
+  for id,layer in pairs(slab.layers) do
+    sandbox.draw(layer.environment)
+  end
+end
+
+return pf.slab
