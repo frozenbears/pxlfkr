@@ -1,4 +1,3 @@
-
 local list = {}
 
 function list.has_node(l, node)
@@ -39,7 +38,7 @@ end
 
 function list.append(l, value)
   local node = {value = value}
-  return list.append_node(l, node) 
+  return list.append_node(l, node)
 end
 
 function list.pop_node(l)
@@ -62,19 +61,64 @@ function list.take(l)
   return list.take_node(l).value
 end
 
+function list.insert_before_node(l, node, new)
+  if node == l.first then
+    l.first = new
+  else
+    node.prev.next = new
+    new.prev = node.prev
+  end
+
+  new.next = node
+  node.prev = new
+  return new
+end
+
+function list.insert_before(l, node, value)
+  local new = {value = value}
+  return list.insert_before_node(l, node, new)
+end
+
 function list.insert_after_node(l, node, new)
-  node.next = new
   if node == l.last then
     l.last = new
   else
-    new.next.prev = new
+    node.next.prev = new
+    new.next = node.next
   end
+
+  new.prev = node
+  node.next = new
+
   return new
 end
 
 function list.insert_after(l, node, value)
-  local new = {prev = node, next = node.next, value = value}
+  local new = {value = value}
   return list.insert_after_node(l, node, new)
+end
+
+function list.replace_node(l, node, new)
+  if node == l.last then
+    l.last = new
+    node.prev.next = new
+    new.prev = node.prev
+  elseif node == l.first then
+    l.first = new
+    node.next.prev = new
+    new.next = node.next
+  else
+    node.next.prev = new
+    node.prev.next = new
+    new.prev = node.prev
+    new.next = node.next
+  end
+  return new
+end
+
+function list.replace(l, node, value)
+  local new = {prev = node, next = node.next, value = value}
+  return list.replace_node(l, node, new)
 end
 
 function list.delete_node(l, node)
@@ -126,4 +170,3 @@ function list.values(l)
 end
 
 return list
-

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C20DE351A0DE59700E30A6E /* OscMessageTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C20DE331A0DE59700E30A6E /* OscMessageTable.cpp */; };
+		0C22815B1CA76D0100E9372E /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C22815A1CA76D0100E9372E /* CoreMIDI.framework */; };
 		0C8DE2DC1A0DDBCF00083878 /* 3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C8DE2D11A0DDBCF00083878 /* 3d.cpp */; };
 		0C8DE2DD1A0DDBCF00083878 /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C8DE2D21A0DDBCF00083878 /* App.cpp */; };
 		0C8DE2DE1A0DDBCF00083878 /* Events.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C8DE2D31A0DDBCF00083878 /* Events.cpp */; };
@@ -34,6 +35,7 @@
 		0C9EC9F61A0B5731009632D1 /* ofxOscSender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C9EC9E71A0B5731009632D1 /* ofxOscSender.cpp */; };
 		0CA536211A09F63A00CD9868 /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA5361A1A09F5DF00CD9868 /* liblua.a */; };
 		0CA536221A09F63A00CD9868 /* libluabind.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA5361C1A09F5DF00CD9868 /* libluabind.a */; };
+		0CE07D471C2F603A000122BB /* lfs.c in Sources */ = {isa = PBXBuildFile; fileRef = 0CE07D451C2F603A000122BB /* lfs.c */; };
 		2991D66A82B2AF8F0DF2BBFD /* ofxLuaFileWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BCCBA18FA85C5A2A68DC1E5 /* ofxLuaFileWriter.cpp */; };
 		77065A8A401D0997A27AE75C /* AppCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED69EA839980FEAC69FB72F1 /* AppCore.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
@@ -121,6 +123,7 @@
 		0C20DE331A0DE59700E30A6E /* OscMessageTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OscMessageTable.cpp; sourceTree = "<group>"; };
 		0C20DE341A0DE59700E30A6E /* OscMessageTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OscMessageTable.h; sourceTree = "<group>"; };
 		0C20DE371A0DE85100E30A6E /* LuaValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuaValue.h; sourceTree = "<group>"; };
+		0C22815A1CA76D0100E9372E /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
 		0C8DE2D11A0DDBCF00083878 /* 3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 3d.cpp; sourceTree = "<group>"; };
 		0C8DE2D21A0DDBCF00083878 /* App.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
 		0C8DE2D31A0DDBCF00083878 /* Events.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Events.cpp; sourceTree = "<group>"; };
@@ -166,6 +169,8 @@
 		0C9EC9E61A0B5731009632D1 /* ofxOscReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxOscReceiver.h; sourceTree = "<group>"; };
 		0C9EC9E71A0B5731009632D1 /* ofxOscSender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxOscSender.cpp; sourceTree = "<group>"; };
 		0C9EC9E81A0B5731009632D1 /* ofxOscSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxOscSender.h; sourceTree = "<group>"; };
+		0CE07D451C2F603A000122BB /* lfs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lfs.c; sourceTree = "<group>"; };
+		0CE07D461C2F603A000122BB /* lfs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lfs.h; sourceTree = "<group>"; };
 		2EECCB7DC6390C5F14543C6D /* AppCore.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = AppCore.h; path = src/AppCore.h; sourceTree = SOURCE_ROOT; };
 		309F562A183F2D2500FF53CA /* luabind.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = luabind.xcodeproj; path = ../../../addons/ofxLua/libs/luabind.xcodeproj; sourceTree = "<group>"; };
 		322182BFE7CEEE93073C559A /* boost.framework */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = wrapper.framework; name = boost.framework; path = ../../../addons/ofxLua/libs/boost/ios/boost.framework; sourceTree = "<group>"; };
@@ -205,6 +210,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C22815B1CA76D0100E9372E /* CoreMIDI.framework in Frameworks */,
 				0CA536211A09F63A00CD9868 /* liblua.a in Frameworks */,
 				0CA536221A09F63A00CD9868 /* libluabind.a in Frameworks */,
 				E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */,
@@ -385,6 +391,7 @@
 		BBAB23C913894ECA00AA2426 /* system frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C22815A1CA76D0100E9372E /* CoreMIDI.framework */,
 				E7F985F515E0DE99003869B5 /* Accelerate.framework */,
 				E4C2424410CC5A17004149E2 /* AppKit.framework */,
 				E4C2424510CC5A17004149E2 /* Cocoa.framework */,
@@ -454,6 +461,8 @@
 				0C20DE331A0DE59700E30A6E /* OscMessageTable.cpp */,
 				0C20DE341A0DE59700E30A6E /* OscMessageTable.h */,
 				0C20DE371A0DE85100E30A6E /* LuaValue.h */,
+				0CE07D461C2F603A000122BB /* lfs.h */,
+				0CE07D451C2F603A000122BB /* lfs.c */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -591,6 +600,7 @@
 				0C9EC9EC1A0B5731009632D1 /* NetworkingUtilsWin.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				0C9EC9F51A0B5731009632D1 /* ofxOscReceiver.cpp in Sources */,
+				0CE07D471C2F603A000122BB /* lfs.c in Sources */,
 				0C9EC9ED1A0B5731009632D1 /* UdpSocketWin.cpp in Sources */,
 				0C20DE351A0DE59700E30A6E /* OscMessageTable.cpp in Sources */,
 				0C8DE2DE1A0DDBCF00083878 /* Events.cpp in Sources */,
@@ -758,6 +768,7 @@
 		E4B69B600A3A1757003C02F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -873,6 +884,7 @@
 		E4B69B610A3A1757003C02F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (

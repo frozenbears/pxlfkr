@@ -1,3 +1,4 @@
+
 #pragma once
 
 extern "C" {
@@ -9,6 +10,6 @@ extern "C" {
 class LuaValue {
 
 public:
-	virtual ~LuaValue() {};
-	virtual void push(lua_State *L) = 0;
+    virtual ~LuaValue() {};
+    virtual void push(lua_State *L) = 0;
 };

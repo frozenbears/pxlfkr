@@ -1,42 +1,39 @@
 
 #include "AppCore.h"
 #include "OscMessageTable.h"
+#include "lfs.h"
 
-//--------------------------------------------------------------
 void AppCore::setup() {
 
     oscReceiver.setup(12345);
 
-	ofSetVerticalSync(true);
-	ofSetLogLevel(OF_LOG_VERBOSE);
+    ofSetVerticalSync(true);
+    ofSetLogLevel(OF_LOG_WARNING);
 
     ofSetWindowTitle("p x l f k r");
     ofSetFrameRate(60);
     ofSetEscapeQuitsApp(false);
-	
-	// init the lua state
-	lua.init();
-	
-	// listen to error events
-	lua.addListener(this);
-	
-	// bind the OF api to the lua state
-	lua.bind<ofxLuaBindings>();
-	
-	// load the pf core
-	lua.doScript("scripts/core.lua");
-	
-	// call the core setup function
-	lua.scriptSetup();
+
+    // init the lua state
+    lua.init();
+    lua.addListener(this);
+
+    // init lfs
+    luaopen_lfs(lua);
+
+    // bind the OF api
+    lua.bind<ofxLuaBindings>();
+    // load the pf core
+    lua.doScript("scripts/core.lua");
+    // set it up
+    lua.scriptSetup();
 }
 
-//--------------------------------------------------------------
 void AppCore::update() {
-    // call the core update function
-	lua.scriptUpdate();
+    lua.scriptUpdate();
     while(oscReceiver.hasWaitingMessages()){
-		// get the next message
-		ofxOscMessage m;
+        // get the next message
+        ofxOscMessage m;
         oscReceiver.getNextMessage(&m);
         OscMessageTable messageTable = OscMessageTable(m);
 
@@ -48,53 +45,56 @@ void AppCore::update() {
             std::cerr << lua_tostring(lua, -1) << std::endl;
             lua_pop(lua, 1);
         }
-	}
+    }
 }
 
-//--------------------------------------------------------------
 void AppCore::draw() {
-	// call the core draw function
-	lua.scriptDraw();
+    lua.scriptDraw();
 }
 
-//--------------------------------------------------------------
 void AppCore::exit() {
-	// call the core exit function
-	lua.scriptExit();
-	
-	// clear the lua state
-	lua.clear();
+    lua.scriptExit();
+
+    // clean up
+    lua.clear();
+}
+
+void AppCore::toggleFullscreen() {
+    fullscreen = !fullscreen;
+    ofSetFullscreen(fullscreen);
+    float aspectRatio = ofGetWidth() / ofGetHeight();
+    gluOrtho2D(0.0, ofGetWidth() * aspectRatio, 0.0, ofGetHeight());
 }
 
 //--------------------------------------------------------------
 void AppCore::keyPressed(int key) {
-	switch(key) {
-		case OF_KEY_ESC:
-			ofToggleFullscreen();
-			break;
+    switch(key) {
+        case OF_KEY_ESC:
+            toggleFullscreen();
+            break;
     }
-	
-	lua.scriptKeyPressed(key);
+
+    lua.scriptKeyPressed(key);
 }
 
 //--------------------------------------------------------------
 void AppCore::mouseMoved(int x, int y) {
-	lua.scriptMouseMoved(x, y);
+    lua.scriptMouseMoved(x, y);
 }
 
 //--------------------------------------------------------------
 void AppCore::mouseDragged(int x, int y, int button) {
-	lua.scriptMouseDragged(x, y, button);
+    lua.scriptMouseDragged(x, y, button);
 }
 
 //--------------------------------------------------------------
 void AppCore::mousePressed(int x, int y, int button) {
-	lua.scriptMousePressed(x, y, button);
+    lua.scriptMousePressed(x, y, button);
 }
 
 //--------------------------------------------------------------
 void AppCore::mouseReleased(int x, int y, int button) {
-	lua.scriptMouseReleased(x, y, button);
+    lua.scriptMouseReleased(x, y, button);
 }
 
 //--------------------------------------------------------------

@@ -1,11 +1,10 @@
-
 package.path = package.path .. ';../../../data/scripts/?.lua'
 
 local routing = require 'routing'
 local slab = require 'slab'
 
-local routes = {} 
-local surface = slab.new()
+local routes = {}
+local surface = slab.new({width = 1024, height = 768})
 
 local start_screen = true
 
@@ -15,12 +14,24 @@ end
 
 function setup()
   print("welcome to pxlfkr")
-    
+
   of.setBackgroundColor(0)
   math.randomseed(os.time())
-    
-  route_action("/new", function(id)
-    slab.add_layer(surface, id)
+
+  -- todo: varargs
+
+  route_action("/resolution", function(width, height)
+    of.setWindowShape(width, height)
+    slab.set_resolution(surface, width, height)
+  end)
+
+  route_action("/new_group", function(id, add_action, target_id)
+    slab.new_group(surface, id, add_action, target_id)
+    start_screen = false
+  end)
+
+  route_action("/new_layer", function(name, id, add_action, target_id, ...)
+    slab.new_layer(surface, name, id, add_action, target_id, ...)
     start_screen = false
   end)
 
@@ -38,7 +49,7 @@ function setup()
 
   route_action("/clear", function(id)
     -- is there a good reason for this?
-    slab.add_layer(surface, id)
+    slab.clear(surface, id)
   end)
 
   route_action("/load", function(id, name)
@@ -47,6 +58,14 @@ function setup()
 
   route_action("/reset", function()
     slab.reset(surface)
+  end)
+
+  route_action("/attach", function(id, name)
+    slab.attach(surface, id, name)
+  end)
+
+  route_action("/param", function(id, name, value, set_action)
+    slab.param(surface, id, name, value, set_action)
   end)
 end
 
@@ -59,7 +78,7 @@ function draw()
   if start_screen then
     of.setColor(255, 255, 255)
     for i = 1,10 do
-        of.drawBitmapString("WELCOME TO PXLFKR", 20*i, 15*i)
+        of.drawBitmapString("OHAI!!!!!", 20*i, 15*i)
     end
   else
     slab.draw(surface)
